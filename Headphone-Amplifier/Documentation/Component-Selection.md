@@ -5,7 +5,7 @@
 | Area | Current evidence | Required decision or check |
 | --- | --- | --- |
 | OPA1612 / OPA161x | User-specified design direction and OPA161x behavioral model | Confirm schematic parts, supply/headroom, and noise requirements; the model does not validate device performance |
-| Output stage | DAC_Amp uses OPA1622; earlier notes mention OPA1656 / OPA1688 | Reconcile schematic, BOM, purchasing choice, and simulation |
+| Output stage | DAC_Amp uses OPA1656; earlier notes mention OPA1622 / OPA1688 | Reconcile schematic, BOM, purchasing choice, and simulation |
 | Tone control | EQ schematic and Bass_Treble simulation | Reconcile values, EQ range, tolerances, and potentiometer footprints |
 | USB-C / PD and LDO supply | Power schematic | Confirm device choices, negotiated voltage, dropout, load current, thermal margins, and protection |
 | Reference voltage | Vref schematic | Verify bias level, buffering, stability, loading, and noise |
