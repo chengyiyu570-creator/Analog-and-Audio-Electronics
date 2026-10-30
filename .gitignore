@@ -1,0 +1,52 @@
+# OS and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vs/
+*.user
+*.suo
+.env
+.env.*
+!.env.example
+
+# Altium caches and automatic backups
+History/
+__Previews/
+Project Logs*/
+*.PrjPcbStructure
+*.SchDocPreview
+*.PcbDocPreview
+*.SchDoc~
+*.PcbDoc~
+*.bak
+*.lck
+
+# Simulation output (keep source circuits, models, and selected reports)
+*.raw
+*.log
+*.vcd
+*.wlf
+
+# Firmware build output
+[Bb]uild/
+Debug/
+Release/
+Objects/
+Listings/
+*.o
+*.obj
+*.elf
+*.axf
+
+# FPGA tool caches (keep HDL, constraints, IP configuration, and scripts)
+.Xil/
+.ip_user_files/
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+db/
+incremental_db/
+output_files/
+
+# Keep manufacturing exports and selected validation reports explicit.

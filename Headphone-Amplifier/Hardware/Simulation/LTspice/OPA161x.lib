@@ -1,0 +1,53 @@
+* OPA161x_CUSTOM.lib -- LTspice-native behavioral approximation
+* Independently created from TI OPA1611/OPA1612 datasheet SBOS450C.
+* NOT a TI transistor-level model. NOT validated for THD+N, noise,
+* PSRR, CMRR, overvoltage, thermal behavior, or power efficiency.
+*
+* One channel of OPA1611/OPA1612, with supplies in ANY orientation
+* as long as VCC > VEE and total supply = 4.5V .. 36V.
+* SPICE PIN ORDER: IN+  IN-  VCC  VEE  OUT
+*
+* Approximate datasheet characteristics:
+* DC open-loop gain: 130dB (3.1623e6 V/V)
+* Unity-gain bandwidth: 40MHz; dominant-pole single-pole model
+* Slew rate: 27V/us; input bias current: +60nA each input
+* Input offset voltage: +100uV; quiescent current: 3.6mA
+* Input impedance: differential 20k||8p; common-mode 1G||2p
+* Output swing: 0.6V from rails (conservative 2k load)
+* Output drive: +55mA/-62mA; simplified output resistance 2ohm
+*
+.SUBCKT OPA161x INP INM VCC VEE OUT
+*
+* Floating local midpoint; neither supply is assumed to be GND.
+BMID MID VEE V={0.5*V(VCC,VEE)}
+*
+* Input impedance and bias currents (illustrative nominal values)
+RDIFF INP INM 20k
+CDIFF INP INM 8p
+RCMP INP MID 1G
+RCMM INM MID 1G
+CCMP INP MID 2p
+CCMM INM MID 2p
+IBP INP VEE 60n
+IBM INM VEE 60n
+*
+* Dominant-pole open-loop stage: gm=1mS, R=3.1623G, C=3.979pF
+* gm*R=3.1623e6 (130dB); gm/(2*pi*C)=40MHz
+* 107.4uA / 3.979pF = 27 V/us, nominal slew rate.
+BGM MID NAMP I={limit(1m*(V(INP,INM)+100u),-107.4u,107.4u)}
+RDOM NAMP MID 3.1623G
+CDOM NAMP MID 3.979p
+*
+* Restrict commanded output to a nominal range inside both rails.
+* Headroom is a simplification and does not model load dependence.
+BCMD NDRV VEE V={limit(V(NAMP),V(VEE)+0.6,V(VCC)-0.6)-V(VEE)}
+*
+* Output stage, current limited, approximated as 2-ohm driver.
+BDRIVE NDRV OUT I={limit((V(NDRV,OUT))/2,-62m,55m)}
+RBLEED OUT VEE 1G
+COUT OUT VEE 2p
+*
+* Nominal (constant) supply current for a single channel.
+IQ VCC VEE 3.6m
+*
+.ENDS OPA161x
