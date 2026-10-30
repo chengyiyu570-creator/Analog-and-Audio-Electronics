@@ -50,7 +50,7 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=Libraries\Schlib1.SchLib
+DocumentPath=Schlib1.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -67,7 +67,7 @@ GenerateClassCluster=0
 DocumentUniqueId=ECDALTEY
 
 [Document2]
-DocumentPath=Libraries\PcbLib1.PcbLib
+DocumentPath=PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -118,7 +118,7 @@ GenerateClassCluster=0
 DocumentUniqueId=GMADJRDH
 
 [Document5]
-DocumentPath=EQ.SchDoc
+DocumentPath=BASSTreble.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -167,6 +167,137 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EIHSJCVC
+
+[Document8]
+DocumentPath=OUTPUT.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=5
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DCVWTMAJ
+
+[Document9]
+DocumentPath=CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document10]
+DocumentPath=CAMtastic2.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\Design Rule Check - PCB1.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1-RoundHoles-Plated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1-SlotHoles-Plated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.G1
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.G2
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GM
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for STM32_LowNoise_Amplifier\PCB1.REP
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
@@ -440,48 +571,56 @@ OutputDocumentPath4=
 OutputVariantName4=[No Variations]
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType5=Gerber
-OutputName5=Gerber Files
+OutputType5=Gerber X2
+OutputName5=Gerber X2 Files
 OutputDocumentPath5=
 OutputVariantName5=[No Variations]
 OutputDefault5=0
-OutputType6=Gerber X2
-OutputName6=Gerber X2 Files
+OutputType6=IPC2581
+OutputName6=IPC-2581 Files
 OutputDocumentPath6=
 OutputVariantName6=[No Variations]
 OutputDefault6=0
-OutputType7=IPC2581
-OutputName7=IPC-2581 Files
+OutputType7=Mask
+OutputName7=Solder/Paste Mask Prints
 OutputDocumentPath7=
 OutputVariantName7=[No Variations]
 OutputDefault7=0
-OutputType8=Mask
-OutputName8=Solder/Paste Mask Prints
+PageOptions7=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType8=NC Drill
+OutputName8=NC Drill Files
 OutputDocumentPath8=
-OutputVariantName8=[No Variations]
+OutputVariantName8=
 OutputDefault8=0
-PageOptions8=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType9=NC Drill
-OutputName9=NC Drill Files
+Configuration8_Name1=ForceUpdateSettings
+Configuration8_Item1=False
+Configuration8_Name2=OutputConfigurationParameter1
+Configuration8_Item2=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|GenerateSeparateViaTypeFiles=False|GenerateToolsByDrillSymbols=False|NumberOfDecimals=4|NumberOfUnits=4|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Record=DrillView|Units=Metric|ZeroesMode=SuppressTrailingZeroes|DocumentPath=D:\Users\Public\Documents\Altium\STM32_LowNoise_Amplifier\PCB1.PcbDoc
+OutputType9=ODB
+OutputName9=ODB++ Files
 OutputDocumentPath9=
-OutputVariantName9=
+OutputVariantName9=[No Variations]
 OutputDefault9=0
-OutputType10=ODB
-OutputName10=ODB++ Files
+OutputType10=Plane
+OutputName10=Power-Plane Prints
 OutputDocumentPath10=
 OutputVariantName10=[No Variations]
 OutputDefault10=0
-OutputType11=Plane
-OutputName11=Power-Plane Prints
+PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType11=Test Points
+OutputName11=Test Point Report
 OutputDocumentPath11=
-OutputVariantName11=[No Variations]
+OutputVariantName11=
 OutputDefault11=0
-PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType12=Test Points
-OutputName12=Test Point Report
+OutputType12=Gerber
+OutputName12=Gerber Files
 OutputDocumentPath12=
-OutputVariantName12=
+OutputVariantName12=[No Variations]
 OutputDefault12=0
+Configuration12_Name1=ForceUpdateSettings
+Configuration12_Item1=False
+Configuration12_Name2=OutputConfigurationParameter1
+Configuration12_Item2=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|BoardID=EIHSJCVC|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=500000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=False|GenerateDRCRulesFile=False|GenerateReliefShapes=True|GenerateReports=True|GerberUnit=Metric|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=True|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MergePadAndRegion=False|MinusApertureTolerance=50|MinusApertureTolerance=50|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=4|NumberOfDecimals=4|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|OutputFormat=Different|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TPlotLayerStateArray,16777217~1,16777218~1,16777219~1,16842751~1,16973830~1,16973831~1,16973834~1,16973835~1,16973832~1,16973833~1|PlotBoardProfile=True|PlotBoardProfileFileName= |PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=50|PlusApertureTolerance=50|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False|UncheckPlotDrillDrawingLayerPair0_Backdrill=False|UncheckPlotDrillDrawingLayerPair0_Checked=False|UncheckPlotDrillDrawingLayerPair0_DrillType=Regular|UncheckPlotDrillDrawingLayerPair0_FileName= |UncheckPlotDrillDrawingLayerPair0_HighLayer=Bottom Layer|UncheckPlotDrillDrawingLayerPair0_LowLayer=Top Layer|UncheckPlotDrillGuideLayerPair0_Backdrill=False|UncheckPlotDrillGuideLayerPair0_Checked=False|UncheckPlotDrillGuideLayerPair0_DrillType=Regular|UncheckPlotDrillGuideLayerPair0_FileName= |UncheckPlotDrillGuideLayerPair0_HighLayer=Bottom Layer|UncheckPlotDrillGuideLayerPair0_LowLayer=Top Layer|DocumentPath=D:\Users\Public\Documents\Altium\STM32_LowNoise_Amplifier\PCB1.PcbDoc
 
 [OutputGroup6]
 Name=Report Outputs
@@ -494,6 +633,24 @@ OutputDocumentPath1=
 OutputVariantName1=[No Variations]
 OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+Configuration1_Name1=ColumnNameFormat
+Configuration1_Item1=CaptionAsName
+Configuration1_Name2=ForceUpdateSettings
+Configuration1_Item2=False
+Configuration1_Name3=General
+Configuration1_Item3=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=True|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|TemplateVaultGuid=|TemplateItemGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=1200|FormHeight=710|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=USD|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|BomSetName=
+Configuration1_Name4=GroupOrder
+Configuration1_Item4=
+Configuration1_Name5=SortOrder
+Configuration1_Item5=Description=Up|Designator=Up
+Configuration1_Name6=VisibleOrder
+Configuration1_Item6=Line #=54|Comment=128|Description=100|Designator=100|Quantity=67|Manufacturer 1=101|Manufacturer Part Number 1=170|Manufacturer Lifecycle 1=146|Supplier 1=74|Supplier Part Number 1=142|Supplier Unit Price 1=126|Supplier Subtotal 1=120
+Configuration1_Name7=VisibleOrder_Base
+Configuration1_Item7=Line #=54|Comment=128|Description=100|Designator=100|Quantity=67|Manufacturer 1=101|Manufacturer Part Number 1=170|Manufacturer Lifecycle 1=146|Supplier 1=74|Supplier Part Number 1=142|Supplier Unit Price 1=126|Supplier Subtotal 1=120
+Configuration1_Name8=VisibleOrder_Consolidated
+Configuration1_Item8=Line #=100|Comment=100|Description=100|Designator=100|Quantity=100|Manufacturer 1=101|Manufacturer Part Number 1=170|Manufacturer Lifecycle 1=146|Supplier 1=74|Supplier Part Number 1=142|Supplier Unit Price 1=126|Supplier Subtotal 1=120
+Configuration1_Name9=VisibleOrder_Flat
+Configuration1_Item9=Line #=100|Comment=100|Description=100|Designator=100|Manufacturer 1=101|Manufacturer Part Number 1=170|Manufacturer Lifecycle 1=146|Supplier 1=74|Supplier Part Number 1=142|Supplier Unit Price 1=126|Supplier Subtotal 1=120
 OutputType2=BOM_ReportCompare
 OutputName2=BOM Compare
 OutputDocumentPath2=
@@ -838,6 +995,16 @@ Type158=1
 Type159=1
 Type160=1
 Type161=1
+Type162=1
+Type163=1
+Type164=1
+Type165=1
+Type166=1
+Type167=1
+Type168=1
+Type169=1
+Type170=1
+Type171=1
 
 [Difference Levels]
 Type1=1
@@ -928,6 +1095,13 @@ Type85=1
 Type86=1
 Type87=1
 Type88=1
+Type89=1
+Type90=1
+Type91=1
+Type92=1
+Type93=1
+Type94=1
+Type95=1
 
 [Electrical Rules Check]
 Type1=1
@@ -1141,6 +1315,96 @@ SelectedOnly=0
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=Schlib1.SchLib
+ComponentDesignItemID0=3.5mm 5pin SMD
+ComponentSymbolReference0=3.5mm 5pin SMD
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
+ComponentLibIdentifierKind1=Library Name And Type
+ComponentLibraryIdentifier1=Schlib1.SchLib
+ComponentDesignItemID1=4pin connector
+ComponentSymbolReference1=4pin connector
+ComponentUpdate1=1
+ComponentIsDeviceSheet1=0
+ComponentLibIdentifierKind2=Library Name And Type
+ComponentLibraryIdentifier2=Schlib1.SchLib
+ComponentDesignItemID2=CAP_CERAMIC
+ComponentSymbolReference2=CAP_CERAMIC
+ComponentUpdate2=1
+ComponentIsDeviceSheet2=0
+ComponentLibIdentifierKind3=Library Name And Type
+ComponentLibraryIdentifier3=Schlib1.SchLib
+ComponentDesignItemID3=CAP_ELECTROLYTIC
+ComponentSymbolReference3=CAP_ELECTROLYTIC
+ComponentUpdate3=1
+ComponentIsDeviceSheet3=0
+ComponentLibIdentifierKind4=Library Name And Type
+ComponentLibraryIdentifier4=Schlib1.SchLib
+ComponentDesignItemID4=CH221K
+ComponentSymbolReference4=CH221K
+ComponentUpdate4=1
+ComponentIsDeviceSheet4=0
+ComponentLibIdentifierKind5=Library Name And Type
+ComponentLibraryIdentifier5=Schlib1.SchLib
+ComponentDesignItemID5=ht75c0-2 LDO
+ComponentSymbolReference5=ht75c0-2 LDO
+ComponentUpdate5=1
+ComponentIsDeviceSheet5=0
+ComponentLibIdentifierKind6=Library Name And Type
+ComponentLibraryIdentifier6=Schlib1.SchLib
+ComponentDesignItemID6=LOG Potentiometer
+ComponentSymbolReference6=LOG Potentiometer
+ComponentUpdate6=1
+ComponentIsDeviceSheet6=0
+ComponentLibIdentifierKind7=Library Name And Type
+ComponentLibraryIdentifier7=Schlib1.SchLib
+ComponentDesignItemID7=OPA1612AIDR
+ComponentSymbolReference7=OPA1612AIDR
+ComponentUpdate7=1
+ComponentIsDeviceSheet7=0
+ComponentLibIdentifierKind8=Library Name And Type
+ComponentLibraryIdentifier8=Schlib1.SchLib
+ComponentDesignItemID8=opa1656idr
+ComponentSymbolReference8=opa1656idr
+ComponentUpdate8=1
+ComponentIsDeviceSheet8=0
+ComponentLibIdentifierKind9=Library Name And Type
+ComponentLibraryIdentifier9=Schlib1.SchLib
+ComponentDesignItemID9=OPA197IDBVR
+ComponentSymbolReference9=OPA197IDBVR
+ComponentUpdate9=1
+ComponentIsDeviceSheet9=0
+ComponentLibIdentifierKind10=Library Name And Type
+ComponentLibraryIdentifier10=Schlib1.SchLib
+ComponentDesignItemID10=Potentiometers 10K RK16312101A2
+ComponentSymbolReference10=Potentiometers 10K RK16312101A2
+ComponentUpdate10=1
+ComponentIsDeviceSheet10=0
+ComponentLibIdentifierKind11=Library Name And Type
+ComponentLibraryIdentifier11=Schlib1.SchLib
+ComponentDesignItemID11=Resistor
+ComponentSymbolReference11=Resistor
+ComponentUpdate11=1
+ComponentIsDeviceSheet11=0
+ComponentLibIdentifierKind12=Library Name And Type
+ComponentLibraryIdentifier12=Schlib1.SchLib
+ComponentDesignItemID12=SMAJ18A TVS
+ComponentSymbolReference12=SMAJ18A TVS
+ComponentUpdate12=1
+ComponentIsDeviceSheet12=0
+ComponentLibIdentifierKind13=Library Name And Type
+ComponentLibraryIdentifier13=Schlib1.SchLib
+ComponentDesignItemID13=TPS25921ADR e-fuse
+ComponentSymbolReference13=TPS25921ADR e-fuse
+ComponentUpdate13=1
+ComponentIsDeviceSheet13=0
+ComponentLibIdentifierKind14=Library Name And Type
+ComponentLibraryIdentifier14=Schlib1.SchLib
+ComponentDesignItemID14=type-c-31-m-17
+ComponentSymbolReference14=type-c-31-m-17
+ComponentUpdate14=1
+ComponentIsDeviceSheet14=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1154,6 +1418,259 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=AddInBom
+ParameterUpdate0=1
+ParameterName1=Body Height
+ParameterUpdate1=1
+ParameterName2=Circluar Pins/Square Pins
+ParameterUpdate2=1
+ParameterName3=Color
+ParameterUpdate3=1
+ParameterName4=Comment
+ParameterUpdate4=1
+ParameterName5=Common Mode Rejection Ratio(CMRR)
+ParameterUpdate5=1
+ParameterName6=Component Kind
+ParameterUpdate6=1
+ParameterName7=CompType
+ParameterUpdate7=1
+ParameterName8=Connect-Disconnect Life
+ParameterUpdate8=1
+ParameterName9=Connector Type
+ParameterUpdate9=1
+ParameterName10=Contact Material
+ParameterUpdate10=1
+ParameterName11=Contact Plating
+ParameterUpdate11=1
+ParameterName12=ConvertToPcb
+ParameterUpdate12=1
+ParameterName13=Copyright
+ParameterUpdate13=1
+ParameterName14=Current Rating
+ParameterUpdate14=1
+ParameterName15=Current Rating-Power
+ParameterUpdate15=1
+ParameterName16=Datasheet
+ParameterUpdate16=1
+ParameterName17=Description
+ParameterUpdate17=1
+ParameterName18=Diameter
+ParameterUpdate18=1
+ParameterName19=Dual Supply
+ParameterUpdate19=1
+ParameterName20=FootprintName
+ParameterUpdate20=1
+ParameterName21=Gain Bandwidth Product
+ParameterUpdate21=1
+ParameterName22=Gender
+ParameterUpdate22=1
+ParameterName23=Height - Seated (Max)
+ParameterUpdate23=1
+ParameterName24=Ib - Input Bias Current
+ParameterUpdate24=1
+ParameterName25=Input Offset Current(Ios)
+ParameterUpdate25=1
+ParameterName26=Input Offset Voltage Drift(Vos TC)
+ParameterUpdate26=1
+ParameterName27=Insulation Height
+ParameterUpdate27=1
+ParameterName28=JLCPCB Part Class
+ParameterUpdate28=1
+ParameterName29=LCSC Part Name
+ParameterUpdate29=1
+ParameterName30=Length
+ParameterUpdate30=1
+ParameterName31=Length of End Connection Pin
+ParameterUpdate31=1
+ParameterName32=Length of Mating Pin
+ParameterUpdate32=1
+ParameterName33=Library Reference
+ParameterUpdate33=1
+ParameterName34=Lifetime
+ParameterUpdate34=1
+ParameterName35=Manufacturer
+ParameterUpdate35=1
+ParameterName36=Manufacturer Part
+ParameterUpdate36=1
+ParameterName37=Manufacturer_Name
+ParameterUpdate37=1
+ParameterName38=Manufacturer_Part_Number
+ParameterUpdate38=1
+ParameterName39=ManufacturerPart
+ParameterUpdate39=1
+ParameterName40=ModelId
+ParameterUpdate40=1
+ParameterName41=ModelName
+ParameterUpdate41=1
+ParameterName42=ModelTransform
+ParameterUpdate42=1
+ParameterName43=Mounting Style
+ParameterUpdate43=1
+ParameterName44=Mounting Type
+ParameterUpdate44=1
+ParameterName45=MountType
+ParameterUpdate45=1
+ParameterName46=Noise density(eN)
+ParameterUpdate46=1
+ParameterName47=Number of Channels
+ParameterUpdate47=1
+ParameterName48=Number of Contacts
+ParameterUpdate48=1
+ParameterName49=Number of Outputs
+ParameterUpdate49=1
+ParameterName50=Number of Pins
+ParameterUpdate50=1
+ParameterName51=Number of Ports
+ParameterUpdate51=1
+ParameterName52=Number of Rows
+ParameterUpdate52=1
+ParameterName53=Operating Temperature
+ParameterUpdate53=1
+ParameterName54=Output Configuration
+ParameterUpdate54=1
+ParameterName55=Output Current
+ParameterUpdate55=1
+ParameterName56=Output Power
+ParameterUpdate56=1
+ParameterName57=Output Type
+ParameterUpdate57=1
+ParameterName58=Output Voltage
+ParameterUpdate58=1
+ParameterName59=PackageReference
+ParameterUpdate59=1
+ParameterName60=PartNumber
+ParameterUpdate60=1
+ParameterName61=Pin Spacing
+ParameterUpdate61=1
+ParameterName62=Pin Structure
+ParameterUpdate62=1
+ParameterName63=Pitch
+ParameterUpdate63=1
+ParameterName64=Polarity type
+ParameterUpdate64=1
+ParameterName65=Power Supply Rejection Ratio (PSRR)
+ParameterUpdate65=1
+ParameterName66=Power(Watts)
+ParameterUpdate66=1
+ParameterName67=Protocol
+ParameterUpdate67=1
+ParameterName68=Protocol Standard
+ParameterUpdate68=1
+ParameterName69=Quiescent Current(Iq)
+ParameterUpdate69=1
+ParameterName70=Rail To Rail
+ParameterUpdate70=1
+ParameterName71=Rank Number
+ParameterUpdate71=1
+ParameterName72=Rated Voltage
+ParameterUpdate72=1
+ParameterName73=RefDes
+ParameterUpdate73=1
+ParameterName74=RoHS
+ParameterUpdate74=1
+ParameterName75=Row Spacing
+ParameterUpdate75=1
+ParameterName76=Single Supply
+ParameterUpdate76=1
+ParameterName77=Slew Rate
+ParameterUpdate77=1
+ParameterName78=standby current
+ParameterUpdate78=1
+ParameterName79=Supplier
+ParameterUpdate79=1
+ParameterName80=Supplier Footprint
+ParameterUpdate80=1
+ParameterName81=Supplier Part
+ParameterUpdate81=1
+ParameterName82=SupplierPart
+ParameterUpdate82=1
+ParameterName83=Symbol
+ParameterUpdate83=1
+ParameterName84=Tolerance
+ParameterUpdate84=1
+ParameterName85=Turns
+ParameterUpdate85=1
+ParameterName86=Type
+ParameterUpdate86=1
+ParameterName87=Value
+ParameterUpdate87=1
+ParameterName88=Voltage - Supply
+ParameterUpdate88=1
+ParameterName89=Voltage Dropout
+ParameterUpdate89=1
+ParameterName90=Voltage Rating
+ParameterUpdate90=1
+ParameterName91=Voltage Rating (Max)
+ParameterUpdate91=1
+ParameterName92=Vos - Input Offset Voltage
+ParameterUpdate92=1
+ParameterName93=Width
+ParameterUpdate93=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=0603 Cap
+ModelUpdate0=1
+ModelType1=PCBLIB
+ModelName1=0603 Cap - C0G
+ModelUpdate1=1
+ModelType2=PCBLIB
+ModelName2=0603 Cap - X7R
+ModelUpdate2=1
+ModelType3=PCBLIB
+ModelName3=0603 RES
+ModelUpdate3=1
+ModelType4=PCBLIB
+ModelName4=0805 CAP
+ModelUpdate4=1
+ModelType5=PCBLIB
+ModelName5=0805 CAP - C0G
+ModelUpdate5=1
+ModelType6=PCBLIB
+ModelName6=0805 RES
+ModelUpdate6=1
+ModelType7=PCBLIB
+ModelName7=1206 CAP C0G
+ModelUpdate7=1
+ModelType8=PCBLIB
+ModelName8=3.5mm 5pin SMD
+ModelUpdate8=1
+ModelType9=PCBLIB
+ModelName9=4pin connector
+ModelUpdate9=1
+ModelType10=PCBLIB
+ModelName10=CH221K
+ModelUpdate10=1
+ModelType11=PCBLIB
+ModelName11=ELC CAP D=5
+ModelUpdate11=1
+ModelType12=PCBLIB
+ModelName12=LDO
+ModelUpdate12=1
+ModelType13=PCBLIB
+ModelName13=LOG Potentiometer
+ModelUpdate13=1
+ModelType14=PCBLIB
+ModelName14=OPA1612AIDR
+ModelUpdate14=1
+ModelType15=PCBLIB
+ModelName15=OPA1656IDR
+ModelUpdate15=1
+ModelType16=PCBLIB
+ModelName16=OPA197IDBVR
+ModelUpdate16=1
+ModelType17=PCBLIB
+ModelName17=Potentiometers 10K RK16312101A2
+ModelUpdate17=1
+ModelType18=PCBLIB
+ModelName18=TPS25921ADR e-fuse
+ModelUpdate18=1
+ModelType19=PCBLIB
+ModelName19=TVS diode
+ModelUpdate19=1
+ModelType20=PCBLIB
+ModelName20=USB-C-SMD_10P-P1.00-L6.8-W8.9
+ModelUpdate20=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
