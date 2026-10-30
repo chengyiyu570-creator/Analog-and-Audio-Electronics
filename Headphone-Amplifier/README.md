@@ -63,8 +63,7 @@ See [design notes](Documentation/Design-Notes.md) for signal-path, feedback, bia
 
 | Circuit | Saved setup | Evidence status |
 | --- | --- | --- |
-| [DAC_Amp.asc](Simulation/LTspice/DAC_Amp.asc) | Transient analysis, 1 kHz input; 32-ohm output load in the circuit | Source available; not rerun during this reorganization |
-| [Bass_Treble.asc](Simulation/LTspice/Bass_Treble.asc) | AC sweep from 10 Hz to 100 kHz; bass/treble parameter combinations | Source available; no verified result plot published |
+| [DAC_Amp.asc](Simulation/LTspice/DAC_Amp.asc) | AC sweep from 10 Hz to 100 kHz; 16-ohm output load in the circuit | Source available; not rerun during this reorganization |
 
 Custom symbols remain beside the circuits; model files are in [Models](Simulation/LTspice/Models/). Relative model paths have been updated. See [simulation notes](Documentation/simulation.md) for reproduction steps and model limitations.
 
