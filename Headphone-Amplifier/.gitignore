@@ -1,0 +1,17 @@
+# Altium generated state and backups
+History/
+__Previews/
+Project Logs*/
+Project Outputs*/
+*.PrjPcbStructure
+*.SchDocPreview
+*.PcbDocPreview
+*.SchDoc~
+*.PcbDoc~
+*.bak
+*.lck
+# Simulation output; retain reviewed plots separately
+*.raw
+*.log
+*.net
+# Keep reviewed fabrication exports in Hardware/Manufacturing/.

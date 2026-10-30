@@ -1,25 +1,28 @@
-# Audio Project V2
+# Headphone Amplifier with Analog EQ
 
-**01 — Analog & Audio Electronics** · Altium Designer · LTspice · PCB Design
+**OPA1612-based analog design · Bass/Treble EQ · USB-C PD · LDO supply · Four-layer PCB target**
 
-[Project index](../README.md) · [Design status](Hardware/Documentation/design-status.md) · [Simulation notes](Hardware/Documentation/simulation.md)
+**Work in Progress** — Native circuit, PCB, and simulation files are available. PCB stack-up, routing, DRC, fabrication, and measured performance have not been verified. The final output amplifier selection still needs reconciliation across the schematic, BOM, and simulation.
 
-A second-generation analog audio board for an STM32-based audio system. This repository contains Altium design files, LTspice simulations, and documentation for ongoing development and hardware validation.
+[Project index](../README.md) · [Design notes](Documentation/Design-Notes.md) · [Component selection](Documentation/Component-Selection.md) · [Test results](Documentation/Test-Results.md)
 
-**Status: in development.** Board fabrication, system testing, and performance validation have not been verified. STM32 firmware is not included.
+## 01 — Project Overview
 
-## Engineering Focus
+This second-generation analog audio board is intended to provide headphone amplification and adjustable stereo bass/treble control for an STM32-based audio system. The analog EQ adjusts the signal independently of the playback firmware. The OPA1612 design direction is subject to component and model reconciliation before performance claims are made.
 
-| Area | Project scope | Current evidence |
-| --- | --- | --- |
-| Analog & audio | Input buffering, stereo bass/treble EQ, volume control, and headphone output | Altium schematics and LTspice circuit files; final output amplifier selection remains to be reconciled |
-| Power electronics | USB-C / PD input, protection, analog regulation, and buffered reference voltage | Power and Vref schematics; hardware validation remains outstanding |
-| Embedded integration | Audio input from an STM32-based playback system | Planned system interface; MCU, DAC architecture, and sample rate still need confirmation |
-| PCB design | Component placement, routing, grounding, and power distribution | Native Altium PCB and footprint library included; layout completion and DRC have not been verified |
+The EQ, USB-C power input, regulation, and reference-voltage circuits remain part of this complete project. STM32 playback firmware is outside this project folder.
 
-This is one complete audio project. Its EQ, power supply, and reference-voltage circuits are subsystems, not separate portfolio repositories. See the [portfolio repositories](../README.md#portfolio-repositories) for the broader organization.
+## 02 — Key Features
 
-## System Overview
+| Feature | Scope and current status |
+| --- | --- |
+| Stereo audio signal path | Input coupling/buffering, tone control, volume control, and headphone output |
+| Analog bass/treble EQ | Native EQ schematic and LTspice parameter-sweep circuit included |
+| USB-C / PD power | Power schematic included; negotiation and hardware behavior not yet validated |
+| LDO supply and reference voltage | Supply and Vref circuits included; ripple, noise, and thermal performance await measurement |
+| Four-layer PCB | Design target; included PCB document requires stack-up, routing, and DRC verification |
+
+## 03 — System Architecture
 
 ```mermaid
 flowchart LR
@@ -27,68 +30,111 @@ flowchart LR
     B --> C[Stereo bass and treble EQ]
     C --> D[Volume control and output buffering]
     D --> E[AC-coupled headphone output]
-    P[USB-C / PD and protection] --> R[Analog power supply]
+    P[USB-C / PD and protection] --> R[LDO / analog supply]
+    R --> B
+    R --> C
+    R --> D
     R --> V[Vref buffer and filtering]
     V --> B
     V --> C
 ```
 
-Refer to the Altium schematics for actual connections. The top sheet connects Vref to the EQ sheet; the physical `Left_in` / `Right_in` interface, STM32 device, and DAC architecture still require confirmation.
+This is a functional overview, not a substitute for the schematics. Confirm the physical Left_in / Right_in connections, final source/DAC architecture, and reference distribution against the native design. An exported block-diagram image and schematic PDF have not been added.
 
-## Design Preview
+## 04 — Circuit Design
+
+The native [Altium project](Hardware/Altium/STM32_LowNoise_Amplifier.PrjPcb) includes TOP, EQ, Power, and Vref sheets, the PCB, and local symbol/footprint libraries.
 
 ### Audio EQ and Buffers
 
-![Altium audio EQ schematic](Images/EQ.png)
+![Audio EQ schematic](Images/EQ.png)
 
 ### Power Supply
 
-![Altium USB-C, protection, and regulator schematic](Images/Power_Supply.png)
+![USB-C, protection, and regulation schematic](Images/Power_Supply.png)
 
 ### Reference Voltage
 
-![Altium Vref schematic](Images/Vref.png)
+![Reference-voltage schematic](Images/Vref.png)
 
-The previews are stored in this repository. The third image shows the reference-voltage schematic, not PCB layout.
+See [design notes](Documentation/Design-Notes.md) for signal-path, feedback, bias, and protection review items, and [component selection](Documentation/Component-Selection.md) for unresolved device choices. The images above are schematics; no PCB rendering is used as a cover yet.
 
-## Repository Structure
+## 05 — Simulation Results
+
+| Circuit | Saved setup | Evidence status |
+| --- | --- | --- |
+| [DAC_Amp.asc](Simulation/LTspice/DAC_Amp.asc) | Transient analysis, 1 kHz input; 32-ohm output load in the circuit | Source available; not rerun during this reorganization |
+| [Bass_Treble.asc](Simulation/LTspice/Bass_Treble.asc) | AC sweep from 10 Hz to 100 kHz; bass/treble parameter combinations | Source available; no verified result plot published |
+
+Custom symbols remain beside the circuits; model files are in [Models](Simulation/LTspice/Models/). Relative model paths have been updated. See [simulation notes](Documentation/simulation.md) for reproduction steps and model limitations.
+
+[Simulation/Results](Simulation/Results/) is reserved for actual frequency-response and transient-response exports. No placeholder graphs or simulated performance numbers are presented.
+
+## 06 — PCB Design
+
+Open [PCB1.PcbDoc](Hardware/Altium/PCB1.PcbDoc) with the project and included [libraries](Hardware/Altium/Libraries/).
+
+The four-layer stack-up, ground and return paths, power distribution, decoupling, component placement, routing, and DRC must be reviewed and documented before fabrication. [Images/PCB](Images/PCB/) is reserved for top/bottom and 3D views; [Images/Assembly](Images/Assembly/) is reserved for real board photos.
+
+[Hardware/Manufacturing](Hardware/Manufacturing/) contains reserved Gerber and Drill directories. Add the actual BOM, pick-and-place file, and stack-up PDF only when exported and checked for a specific board revision.
+
+## 07 — Measurements
+
+No bench results have been recorded here. [Measurements](Measurements/) is reserved for real data; [Test-Results.md](Documentation/Test-Results.md) records the current status and proposed test plan.
+
+Planned checks include frequency response, clipping and output load behavior, supply ripple, noise, and distortion with documented equipment and conditions. Simulation curves must not be labeled as hardware measurements.
+
+## 08 — Design Challenges & Revisions
+
+- Reconcile OPA1612-related design choices and the output-stage device with the BOM and simulation models.
+- Resolve final input/DAC architecture and physical connector wiring.
+- Check resistor/capacitor part numbers and potentiometer, headphone, and USB-C footprints.
+- Verify the PCB stack-up and run electrical validation and DRC.
+- Record reproducible simulation plots, then fabrication and bench evidence.
+
+The [design-status record](Documentation/design-status.md) retains historical context. See [IMPORT.md](IMPORT.md) for provenance and the directory reorganization. No Rev1/Rev2 fabrication release is claimed. Use project-scoped commits and publish manufacturing files in a release only after a reproducible production revision is ready.
+
+## Project Structure
 
 ```text
 Headphone-Amplifier/
 ├── README.md
+├── .gitignore
+├── IMPORT.md
+├── THIRD_PARTY_NOTICES.md
 ├── Hardware/
-│   ├── Schematics/       # Altium project, schematic sheets and symbol library
-│   ├── PCB/              # PCB document and footprint library
-│   ├── Simulation/       # Original LTspice circuits, symbols and models
-│   └── Documentation/    # Design status and simulation notes
-├── Images/
-│   ├── Power_Supply.png
-│   ├── EQ.png
-│   └── Vref.png
-└── THIRD_PARTY_NOTICES.md
+│   ├── Altium/
+│   │   ├── STM32_LowNoise_Amplifier.PrjPcb
+│   │   ├── TOP.SchDoc / EQ.SchDoc / Power.SchDoc / Vref.SchDoc
+│   │   ├── PCB1.PcbDoc
+│   │   └── Libraries/           # Schlib1.SchLib, PcbLib1.PcbLib
+│   └── Manufacturing/
+│       ├── Gerber/              # Reserved
+│       └── Drill/               # Reserved
+├── Simulation/
+│   ├── LTspice/                 # Original circuits and custom symbols
+│   │   └── Models/              # Required device models
+│   └── Results/                 # Reserved
+├── Documentation/
+│   ├── Design-Notes.md
+│   ├── Component-Selection.md
+│   ├── Test-Results.md
+│   ├── design-status.md
+│   └── simulation.md
+├── Images/                     # Existing schematic images retained
+│   ├── PCB/                    # Reserved
+│   └── Assembly/               # Reserved
+└── Measurements/               # Reserved
 ```
 
-No PCB layout screenshot has been supplied.
+Reserved directories contain only .gitkeep so Git can retain them. There are no empty PNG, PDF, or CSV files.
 
 ## Getting Started
 
-1. Open `Hardware/Schematics/STM32_LowNoise_Amplifier.PrjPcb` in Altium Designer. The screenshots were captured using version 26.2.0.
-2. Open `Hardware/Simulation/LTspice/DAC_Amp.asc` or `Bass_Treble.asc` in LTspice. Required models and custom symbols are located in the same directory.
-3. Review the analysis directives and output nodes in the [simulation notes](Hardware/Documentation/simulation.md) before running a simulation.
-
-## Next Steps
-
-- Confirm the audio input connector, STM32 DAC or external DAC, and sample rate.
-- Reconcile output amplifier selection, BOM part numbers, and potentiometer footprints.
-- Complete project validation, PCB layout and routing, and manufacturing checks.
-- Add actual LTspice window screenshots and hardware measurement records.
-
-## PCB Design Documentation
-
-The native board document and footprint library are in [Hardware/PCB](Hardware/PCB/). PCB work is part of this audio project and is tracked alongside the circuit design.
-
-Before presenting the board as manufacturing-ready, add the layer stack-up, placement and routing screenshots, grounding and return-path rationale, electrical validation and DRC results, and fabrication outputs. Record bench measurements separately from simulation results.
+1. Open `Hardware/Altium/STM32_LowNoise_Amplifier.PrjPcb` in Altium Designer. Included document/library paths are project-relative.
+2. Open `Simulation/LTspice/DAC_Amp.asc` or `Bass_Treble.asc` in LTspice, keeping the custom symbols and Models directory in place.
+3. Follow the [simulation notes](Documentation/simulation.md), confirm model loading, and record any validation issues. This directory reorganization was checked statically, not by running Altium or LTspice.
 
 ## Licensing
 
-No open-source license has been selected. The repository is intended to remain private initially. Third-party device models retain their respective copyright notices and terms; see [Third-Party Notices](THIRD_PARTY_NOTICES.md).
+No open-source license has been selected, so no LICENSE file is fabricated or added. See [third-party notices](THIRD_PARTY_NOTICES.md) for model and library restrictions.
