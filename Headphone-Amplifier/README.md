@@ -57,7 +57,7 @@ The native [Altium project](Hardware/Altium/STM32_LowNoise_Amplifier.PrjPcb) inc
 
 ![Reference-voltage schematic](Images/Vref.png)
 
-### Reference Voltage
+### Output Stage
 
 ![Output schematic](Images/Output.png)
 
