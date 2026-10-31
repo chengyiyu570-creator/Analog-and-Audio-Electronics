@@ -57,6 +57,10 @@ The native [Altium project](Hardware/Altium/STM32_LowNoise_Amplifier.PrjPcb) inc
 
 ![Reference-voltage schematic](Images/Vref.png)
 
+### Reference Voltage
+
+![Output schematic](Images/Output.png)
+
 See [design notes](Documentation/Design-Notes.md) for signal-path, feedback, bias, and protection review items, and [component selection](Documentation/Component-Selection.md) for unresolved device choices. The images above are schematics; no PCB rendering is used as a cover yet.
 
 ## 05 — Simulation Results
