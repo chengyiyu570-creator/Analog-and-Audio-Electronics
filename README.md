@@ -28,4 +28,5 @@ Scaffolds are organizational placeholders, not completed designs. Only the headp
 
 - [Analog & Audio Electronics](https://github.com/chengyiyu570-creator/Analog-and-Audio-Electronics)
 - [Embedded Systems](https://github.com/chengyiyu570-creator/Embedded-Systems)
+- [Digital Design & FPGA](https://github.com/chengyiyu570-creator/Digital-Design-and-FPGA)
 - [Power Electronics](https://github.com/chengyiyu570-creator/Power-Electronics)
