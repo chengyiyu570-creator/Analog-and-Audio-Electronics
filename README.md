@@ -9,7 +9,7 @@ This repository groups independent projects within one hardware discipline. Each
 | Project | Status |
 | --- | --- |
 | [Headphone Amplifier](Headphone-Amplifier/) | Design files imported; in development |
-| [Microphone Preamplifier](Microphone-Preamplifier/) | Scaffold only; source files and validation pending |
+| [Microphone Preamplifier](Microphone-Preamplifier/) | Design files imported; Development finished |
 | [Audio Filters](Audio-Filters/) | Scaffold only; source files and validation pending |
 | [Other Analog Circuits](Other-Analog-Circuits/) | Scaffold only; source files and validation pending |
 
