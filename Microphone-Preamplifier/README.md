@@ -58,20 +58,7 @@ The screenshot shows approximately 20 output cycles over 10 ms, with output peak
 
 These screenshots do not establish hardware stability, distortion, or measured output power. See [Simulation Notes](Documentation/Simulation-Notes.md) for settings, limitations, and revision differences.
 
-## 5. Hardware Testing and Debugging
-
-The supplied project history reports:
-
-| Test or change | Reported observation | Interpretation |
-| --- | --- | --- |
-| Component inspection | A microphone bias resistor was fitted as 75 Ω instead of the intended 750 Ω | Assembly value error identified |
-| Resistor replacement | Replaced with 750 Ω | Correction reported; effect on oscillation not separately recorded |
-| Node probing | Oscillation observed at a node described as the microphone side of C4 | Exact node and design revision need confirmation |
-| Microphone disconnected | Oscillation disappeared and the node stabilized | The microphone input path was implicated; root cause remains unresolved |
-
-**Reference discrepancy:** In the supplied hardware schematic, C4 is the 1000 µF speaker output coupling capacitor. In the LTspice screenshot, C4 is a 10 µF input coupling capacitor. The historical node description must be reconciled with the design revision before assigning a hardware test point.
-
-See [Debugging Notes](Documentation/Debugging-Notes.md) for the investigation outline.
+## 5. [Hardware Testing and Debugging](Documentation/Debugging-Notes.md)
 
 ## 6. Known Issues and Lessons Learned
 
@@ -81,21 +68,10 @@ See [Debugging Notes](Documentation/Debugging-Notes.md) for the investigation ou
 - Record exact test points, circuit revisions, and measurement conditions.
 - Simulation and hardware evidence must be evaluated separately.
 
-## 7. Next Steps
-
-- [ ] Import native Altium files, BOM, and tool version.
-- [ ] Import LTspice schematic, models, raw data, and tool version.
-- [ ] Reconcile simulation and hardware component values and reference designators.
-- [ ] Confirm the intended 750 Ω resistor's hardware reference designator.
-- [ ] Add assembled-board photographs and available bench captures.
-- [ ] Document supply, load, probe setup, and oscillation frequency/amplitude.
-- [ ] Test with a dummy load and controlled electrical input to help separate acoustic feedback from electrical instability.
-- [ ] Validate individual stages and investigate bias, grounding, decoupling, and signal coupling before a board revision.
-
-## 8. Repository Structure
+## 7. Repository Structure
 
 - [Images](Images/): supplied schematic, PCB layout, and simulation screenshots.
-- [Documentation/Debugging-Notes.md](Documentation/Debugging-Notes.md): historical observations and proposed tests.
+- [Documentation/Debugging-Notes.md](Documentation/Debugging-Notes.md): bench observations and debugging results.
 - [Documentation/Simulation-Notes.md](Documentation/Simulation-Notes.md): screenshot evidence and reproducibility outline.
 - [Hardware/Altium](Hardware/Altium/): reserved for native hardware sources.
 - [Simulation/LTspice](Simulation/LTspice/): reserved for native simulation sources.
